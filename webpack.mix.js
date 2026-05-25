@@ -19,7 +19,7 @@ mix.setPublicPath("assets/")
     .js("node_modules/swiper/swiper-bundle.js", "js/")
     .copyDirectory("node_modules/lightgallery/fonts", "assets/fonts/")
     .browserSync({
-        proxy: "localhost81/hucr/stachema.cz",
+        proxy: "localhost83/hucr/prisadydobetonu.stachema.cz",
         files: [
             "layouts/**/*",
             "pages/**/*",

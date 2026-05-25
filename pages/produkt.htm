@@ -31,17 +31,17 @@ function onInit() {
     }) %}
 {% endfor %}
 
-{% set items = items|merge({
-    "produkt": {
-        "title" : product.title,
-        "active": true,
-    },
-}) %}
+{#{% set items = items|merge({#}
+{#    "produkt": {#}
+{#        "title" : product.title,#}
+{#        "active": true,#}
+{#    },#}
+{#}) %}#}
 
 {% partial "breadcrumb" items=items %}
 
-<div class="container-fluid pb-5 px-0" id="product">
-    <div class="pt-xl-4">
+<div class="container-fluid pb-5" id="product">
+    <div class="pt-4">
         {% component "product" %}
     </div>
 

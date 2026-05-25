@@ -1,0 +1,16 @@
+fields:
+    import_files:
+        label: "Importovat soubory ke stažení"
+        comment: "Naskenuje vybranou složku Media a přiřadí soubory k produktům podle stachema_id v názvu souboru."
+        span: left
+        type: switch
+    files_folder:
+        label: "Složka se soubory"
+        comment: "Vyberte složku v Media manageru, ze které se mají soubory načíst."
+        span: right
+        mode: folder
+        type: mediafinder
+        trigger:
+            action: show
+            field: import_files
+            condition: checked

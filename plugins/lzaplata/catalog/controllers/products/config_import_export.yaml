@@ -2,3 +2,4 @@ import:
     title: lzaplata.catalog::lang.product.import.title
     modelClass: LZaplata\Catalog\Models\ProductImport
     list: $/lzaplata/catalog/models/productimport/columns.yaml
+    form: $/lzaplata/catalog/models/productimport/fields.yaml

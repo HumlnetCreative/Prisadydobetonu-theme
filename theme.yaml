@@ -1,9 +1,9 @@
-name: Stachema
-description: 'Theme for Stachema company from Kolín.'
+name: Přísady do betonu
+description: 'Theme for Stachema company from Kolín branch.'
 author: 'Lukáš Záplata'
 homepage: ''
-authorCode: LZaplata
-code: stachema
+authorCode: HumlnetCreative
+code: prisadydobetonu
 parent: ''
 database: '0'
 require:

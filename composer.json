@@ -1,7 +1,7 @@
 {
     "name": "humlnetcreative/prisadydobetonu-theme",
     "type": "october-theme",
-    "description": "Theme for Stachema branch company from Kol\u00edn.",
+    "description": "Theme for Stachema company from Kol\u00edn branch.",
     "require": {
         "composer/installers": "~1.0"
     }

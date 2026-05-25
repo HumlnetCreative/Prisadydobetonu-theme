@@ -466,38 +466,14 @@ footer
 
 .products
     .product
-        @media (any-hover: hover)
-            @include media-breakpoint-up(xl)
-                height: 310px
-
         a
-            .title-excerpt
-                background-color: transparent
-                z-index: 1
-
-                .title
-                    @extend .text-decoration-none-w-hover
-
-            .bg-white
-                max-height: 0
-
-                @media (any-hover: none)
-                    display: none !important
+            .title
+                @extend .text-decoration-none-w-hover
 
             &:hover
-                box-shadow: 0 20px 50px 2px rgba(3, 21, 51, 0.18)
-
-                .title-excerpt
-                    background-color: var(--bs-white)
-                    padding-left: map-get($spacers, 3)
-                    padding-right: map-get($spacers, 3)
-
-                    .title
-                        color: var(--bs-primary) !important
-                        text-decoration-color: inherit !important
-
-                .bg-white
-                    max-height: 500px
+                .title
+                    color: var(--bs-primary) !important
+                    text-decoration-color: inherit !important
 
 .pagination
     .page-item

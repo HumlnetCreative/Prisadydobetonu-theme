@@ -1,17 +1,17 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.27.11",
-    "browser-sync-webpack-plugin": "^2.3.0",
+    "browser-sync": "^3.0.4",
+    "browser-sync-webpack-plugin": "^2.4.0",
     "laravel-mix": "^6.0.49",
     "resolve-url-loader": "^5.0.0",
-    "sass": "^1.57.1",
-    "sass-loader": "^13.2.0"
+    "sass": "^1.99.0",
+    "sass-loader": "^16.0.8"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3",
-    "jquery": "^3.6.2",
-    "lightgallery": "^2.7.0",
-    "swiper": "^8.4.5"
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1",
+    "lightgallery": "^2.9.0",
+    "swiper": "^12.1.4"
   }
 }

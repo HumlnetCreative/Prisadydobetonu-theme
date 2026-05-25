@@ -1,89 +1,21 @@
 {% set products = __SELF__.products %}
 
 {% if products.count %}
-    <div class="products row row-cols-1 gx-4 gy-5 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
-        {% set z_index = products.count %}
-
+    <div class="products d-flex flex-column">
         {% for product in products %}
-            <div class="product col" style="z-index: {{ z_index }};">
-                <a href="{{ product.url }}" class="text-decoration-none d-flex flex-column rounded-3 overflow-hidden">
-                    {% set image = ["products/", product.stachema_id, ".png"]|join %}
+            <div class="product">
+                <a href="{{ product.url }}" class="text-decoration-none d-block py-3 border-bottom border-tertiary border-opacity-07">
+                    <h2 class="title mb-0 fs-17 ls-n02 text-tertiary fw-medium">
+                        {{ product.title }}
+                    </h2>
 
-                    {% if file_exists(image) %}
-                        <p class="img bg-gray rounded-3 mb-0">
-                            <img src="{{ image|media|resize(600, 400, {"mode": "crop"}) }}" alt="{{ product.title }}" class="img-fluid w-100">
+                    {% if product.excerpt %}
+                        <p class="excerpt mb-0 mt-1 fs-13 text-tertiary-55">
+                            {{ product.excerpt }}
                         </p>
                     {% endif %}
-
-                    <div class="title-excerpt mt-n2 pt-2 position-relative">
-                        <h2 class="title mb-0 fs-17 ls-n02 text-tertiary fw-medium mt-3 mb-0">
-                            {{ product.title }}
-                        </h2>
-
-                        {% if product.excerpt %}
-                            <p class="excerpt mb-0 mt-1 fs-13 text-tertiary-55">
-                                {{ product.excerpt }}
-                            </p>
-                        {% endif %}
-                    </div>
-
-                    <div class="bg-white mt-3 d-flex flex-column fs-13 px-3 gap-3">
-                        {% set pattern = "@(.+?):(.+)@" %}
-
-                        {% if product.packages %}
-                            <p class="mb-0 d-flex flex-column w-100 justify-content-between text-tertiary">
-                                {% set packages = preg_match(pattern, product.packages) %}
-
-                                <span class="text-tertiary-55">
-                                    {{ packages.1 }}:
-                                </span>
-
-                                <span class="fw-semibold mt-1">
-                                    {{ packages.2 }}
-                                </span>
-                            </p>
-                        {% endif %}
-
-                        {% if product.consumption %}
-                            <p class="mb-0 d-flex flex-column w-100 justify-content-between text-tertiary">
-                                {% set consumption = preg_match(pattern, product.consumption) %}
-
-                                <span class="text-tertiary-55">
-                                    {{ consumption.1 }}:
-                                </span>
-
-                                <span class="fw-semibold mt-1">
-                                    {{ consumption.2 }}
-                                </span>
-                            </p>
-                        {% endif %}
-
-                        {% if product.key_properties %}
-                            <p class="mb-0 d-flex flex-column w-100 justify-content-between text-tertiary">
-                                {% set key_properties = preg_match(pattern, product.key_properties) %}
-
-                                <span class="text-tertiary-55">
-                                    {{ key_properties.1 }}:
-                                </span>
-
-                                <span class="fw-semibold mt-1">
-                                    {{ key_properties.2 }}
-                                </span>
-                            </p>
-                        {% endif %}
-
-                        <p class="mt-2 mb-4">
-                            <button class="btn btn-gray w-100 d-inline-flex align-items-center justify-content-center">
-                                Další
-
-                                <span class="mi-arrow-right mi-16 bg-secondary ms-2 transition"></span>
-                            </button>
-                        </p>
-                    </div>
                 </a>
             </div>
-
-            {% set z_index = z_index - 1 %}
         {% endfor %}
     </div>
 {% endif %}
