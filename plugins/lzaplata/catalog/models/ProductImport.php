@@ -136,12 +136,6 @@ class ProductImport extends ImportModel
 
                 $product->categories()->sync($categoryIds, false);
 
-                // attach files parsed from filenames
-
-                if ($importFiles) {
-                    $this->attachProductFiles($product, $folderIndex);
-                }
-
                 if (!$productExists) {
                     $this->logCreated();
                 } else {
@@ -150,6 +144,50 @@ class ProductImport extends ImportModel
             } catch (\Exception $exception) {
                 $this->logError($row, $exception->getMessage());
             }
+        }
+
+        if ($importFiles && !empty($folderIndex)) {
+            $this->attachFilesToDatabaseProducts($folderIndex);
+        }
+    }
+
+    /**
+     * Attaches indexed files to every matching product in the database, independent of the CSV rows.
+     *
+     * @param  array $folderIndex
+     * @return void
+     */
+    protected function attachFilesToDatabaseProducts(array $folderIndex): void
+    {
+        $stachemaIds = array_keys($folderIndex);
+        $products = Product::whereIn("stachema_id", $stachemaIds)->get();
+
+        foreach ($products as $product) {
+            try {
+                $this->attachProductFiles($product, $folderIndex);
+            } catch (\Exception $exception) {
+                $this->logError(0, sprintf(
+                    "Failed to attach files to product '%s' (stachema_id %s): %s",
+                    $product->title,
+                    $product->stachema_id,
+                    $exception->getMessage()
+                ));
+            }
+        }
+
+        $matchedIds = $products->pluck("stachema_id")->all();
+        $unmatchedIds = array_diff($stachemaIds, $matchedIds);
+
+        foreach ($unmatchedIds as $unmatchedId) {
+            $files = array_map(function ($entry) {
+                return basename($entry["path"]);
+            }, $folderIndex[$unmatchedId]);
+
+            $this->logError(0, sprintf(
+                "No product found for stachema_id '%s' (files: %s)",
+                $unmatchedId,
+                implode(", ", $files)
+            ));
         }
     }
 
@@ -293,6 +331,8 @@ class ProductImport extends ImportModel
         } else {
             return null;
         }
+
+        $type = strtoupper($type);
 
         if (!isset(self::$fileTypeLabels[$type])) {
             return null;
