@@ -1,17 +1,17 @@
 items:
-    -
-        title: E-SHOP
-        nesting: null
-        type: url
-        url: 'https://www.sincolor.cz/'
-        code: ''
-        reference: null
-        cmsPage: null
-        replace: null
-        viewBag:
-            isHidden: '0'
-            cssClass: eshop
-            isExternal: '1'
+#    -
+#        title: E-SHOP
+#        nesting: null
+#        type: url
+#        url: 'https://www.sincolor.cz/'
+#        code: ''
+#        reference: null
+#        cmsPage: null
+#        replace: null
+#        viewBag:
+#            isHidden: '0'
+#            cssClass: eshop
+#            isExternal: '1'
     -
         title: Produkty
         nesting: null
