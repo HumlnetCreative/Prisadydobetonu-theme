@@ -1,0 +1,16 @@
+uuid: 69eb5118-922d-4434-8e96-5b1b01ddf0f7
+handle: About\Content
+type: single
+name: Obsah
+drafts: false
+
+primaryNavigation:
+    label: O nás
+    icon: icon-info-circle
+    order: 150
+
+fields:
+    text:
+        label: Text
+        type: richeditor
+        size: huge
