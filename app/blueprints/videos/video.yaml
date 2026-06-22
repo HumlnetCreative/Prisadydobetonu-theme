@@ -1,0 +1,43 @@
+uuid: b65bd761-d664-4475-8eca-674f6e7ed0e4
+handle: Videos\Video
+type: structure
+name: Videa
+showImport: false
+showExport: false
+multisite: true
+
+structure:
+    maxDepth: 1
+
+primaryNavigation:
+    label: Videa
+    icon: icon-video-camera
+    order: 170
+
+navigation:
+    icon: icon-list-ul
+    parent: Videos\Video
+    order: 10
+
+fields:
+    image:
+        label: Obrázek
+        type: fileupload
+        span: left
+        maxFiles: 1
+        fileTypes: png,jpg,jpeg,webp
+        column: false
+    excerpt:
+        label: Perex
+        type: textarea
+        size: small
+        column:
+            type: text
+    text:
+        label: Text
+        type: richeditor
+        column: false
+    youtube_code:
+        label: Kód youtube videa
+        type: textarea
+        span: left
