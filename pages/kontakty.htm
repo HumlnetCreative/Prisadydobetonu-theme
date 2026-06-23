@@ -26,54 +26,6 @@ handle = "Contacts\Content"
             Kontakty
         </h1>
 
-        <h2 class="h3 mb-4">
-            Obchodní regiony
-        </h2>
-
-        <div class="regions row row-cols-1 g-3 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 mb-80">
-            <div class="region col">
-                <a href="{{ "kontakty-region-sever"|page }}" class="d-flex align-items-center border border-1 border-gray-dark p-2 rounded-3 text-decoration-none transition">
-                    <span class="img me-3 mi-40 d-inline-flex align-items-center justify-content-between bg-secondary rounded-3">
-                        <img src="{{ 'assets/images/logo-sm.svg'|theme }}" alt="stachema" class="img-fluid w-100 of-none">
-                    </span>
-
-                    <span class="title fs-13 fw-medium ls-n02 text-secondary transition lh-19 me-3">
-                        Region Sever
-                    </span>
-
-                    <span class="mi mi-caret-right mi-12 bg-secondary ms-auto"></span>
-                </a>
-            </div>
-
-            <div class="region col">
-                <a href="{{ "kontakty-region-jih"|page }}" class="d-flex align-items-center border border-1 border-gray-dark p-2 rounded-3 text-decoration-none transition">
-                    <span class="img me-3 mi-40 d-inline-flex align-items-center justify-content-between bg-secondary rounded-3">
-                        <img src="{{ 'assets/images/logo-sm.svg'|theme }}" alt="stachema" class="img-fluid w-100 of-none">
-                    </span>
-
-                    <span class="title fs-13 fw-medium ls-n02 text-secondary transition lh-19 me-3">
-                        Region Jih
-                    </span>
-
-                    <span class="mi mi-caret-right mi-12 bg-secondary ms-auto"></span>
-                </a>
-            </div>
-
-            <div class="region col">
-                <a href="{{ "kontakty-region-morava"|page }}" class="d-flex align-items-center border border-1 border-gray-dark p-2 rounded-3 text-decoration-none transition">
-                    <span class="img me-3 mi-40 d-inline-flex align-items-center justify-content-between bg-secondary rounded-3">
-                        <img src="{{ 'assets/images/logo-sm.svg'|theme }}" alt="stachema" class="img-fluid w-100 of-none">
-                    </span>
-
-                    <span class="title fs-13 fw-medium ls-n02 text-secondary transition lh-19 me-3">
-                        Region Morava
-                    </span>
-
-                    <span class="mi mi-caret-right mi-12 bg-secondary ms-auto"></span>
-                </a>
-            </div>
-        </div>
-
         {% for category in categories.where("slug", "hlavni-kontakty").first.children %}
             {% if loop.index == 1 %}
                 <div class="row row-cols-1 row-cols-md-2">
