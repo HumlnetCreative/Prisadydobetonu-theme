@@ -3,7 +3,7 @@ handle: Download\Content
 type: single
 name: Obsah
 drafts: false
-multisite: false
+multisite: true
 
 primaryNavigation:
     label: Ke stažení
@@ -29,6 +29,7 @@ fields:
                     type: recordfinder
                     useRelation: false
                     modelClass: LZaplata\Files\Models\Category
+                    nameFrom: name
                     span: left
                     list:
                         columns:
