@@ -26,7 +26,7 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: Laboratoře
+        title: Laboratoř
         nesting: null
         type: cms-page
         url: null
