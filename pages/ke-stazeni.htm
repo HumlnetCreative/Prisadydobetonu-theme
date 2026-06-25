@@ -43,9 +43,10 @@ function onStart() {
 
                 {{ section.text|raw }}
 
-                {% set selected_category = categories.find(section.category) %}
+                {% set category_id = section.category is iterable ? section.category|first : section.category %}
+                {% set selected_category = category_id ? categories.find(category_id) : null %}
 
-                {% if selected_category %}
+                {% if selected_category and selected_category.slug %}
                     {% component "files" category=selected_category.slug %}
                 {% endif %}
             {% endfor %}
