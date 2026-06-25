@@ -1,0 +1,35 @@
+uuid: 6d01a4cd-69c4-490e-8f2e-7957ed8d4568
+handle: Download\Content
+type: single
+name: Obsah
+drafts: false
+multisite: true
+
+primaryNavigation:
+    label: Ke stažení
+    icon: icon-download
+    order: 160
+
+fields:
+    sections:
+        label: Sekce dokumentů
+        type: repeater
+        itemsExpanded: false
+        form:
+            fields:
+                heading:
+                    label: Nadpis
+                    type: text
+                    span: left
+                text:
+                    label: Text
+                    type: richeditor
+                category:
+                    label: Kategorie souborů
+                    type: recordfinder
+                    useRelation: false
+                    modelClass: LZaplata\Files\Models\Category
+                    span: left
+                    list:
+                        columns:
+                            name: Název
