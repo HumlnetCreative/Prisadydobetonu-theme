@@ -43,8 +43,10 @@ function onStart() {
 
                 {{ section.text|raw }}
 
-                {% if section.category %}
-                    {% component "files" category=categories.find(section.category).slug %}
+                {% set selected_category = categories.find(section.category) %}
+
+                {% if selected_category %}
+                    {% component "files" category=selected_category.slug %}
                 {% endif %}
             {% endfor %}
         </div>
