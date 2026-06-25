@@ -3,7 +3,7 @@ handle: Download\Content
 type: single
 name: Obsah
 drafts: false
-multisite: true
+multisite: false
 
 primaryNavigation:
     label: Ke stažení
@@ -32,4 +32,4 @@ fields:
                     span: left
                     list:
                         columns:
-                            title: Název
+                            name: Název
