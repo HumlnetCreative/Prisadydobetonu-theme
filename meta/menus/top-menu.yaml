@@ -1,9 +1,9 @@
 items:
     -
-        title: 'Přísady do betonu'
+        title: 'STACHEMA CZ'
         nesting: null
         type: url
-        url: 'https://prisadydobetonu.stachema.cz/'
+        url: 'https://www.stachema.cz/'
         code: ''
         reference: null
         cmsPage: null
@@ -39,9 +39,27 @@ items:
 #            cssClass: ''
 #            isExternal: '1'
     -
-        title: 'Stachema SK'
+        title: 'STACHEMA Bratislava'
         type: url
         url: 'https://www.stachema.sk/'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'STACHEMA Polska'
+        type: url
+        url: 'https://www.stachema.pl/'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
+        title: 'STACHEMA Lvov-servis'
+        type: url
+        url: 'https://www.stachema.ua/'
         code: ''
         viewBag:
             isHidden: '0'
