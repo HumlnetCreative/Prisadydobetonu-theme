@@ -32,4 +32,4 @@ fields:
                     span: left
                     list:
                         columns:
-                            name: Název
+                            title: Název
