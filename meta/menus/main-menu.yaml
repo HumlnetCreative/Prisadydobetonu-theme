@@ -31,7 +31,7 @@ items:
         type: cms-page
         url: null
         code: ''
-        reference: laboratore
+        reference: laborator
         cmsPage: null
         replace: null
         viewBag:
