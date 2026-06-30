@@ -1,24 +1,22 @@
 {% set categories = __SELF__.categories %}
 
 {% if categories.count %}
-    <div class="categories row row-cols-1 g-4 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
+    <div class="categories row row-cols-1 g-3 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
         {% for category in categories %}
             <div class="category col">
-                <div class="d-flex flex-column gap-3 position-relative">
-                    <a href="{{ category.url }}" class="transition rounded-3 overflow-hidden">
-                        {% if category.image %}
-                            <p class="img mb-0 position-relative">
-                                <img src="{{ category.image.thumb(600, 400, {"mode": "crop"}) }}" alt="{{ category.image.description }}" class="img-fluid w-100">
+                <a href="{{ category.url }}" class="d-flex align-items-center border border-1 border-gray-dark p-2 rounded-3 text-decoration-none transition">
+                    {% if category.image %}
+                        <span class="img me-3">
+                            <img src="{{ category.image.thumb(40, 40, {"mode": "crop"}) }}" alt="{{ category.image.description }}" class="img-fluid w-100">
+                        </span>
+                    {% endif %}
 
-                                <span class="gradient position-absolute start-0 top-0 w-100 h-100"></span>
-                            </p>
-                        {% endif %}
+                    <span class="title fs-13 fw-medium ls-n02 text-secondary transition lh-19 me-3">
+                        {{ category.title }}
+                    </span>
 
-                        <h3 class="title position-absolute start-0 bottom-0 fs-20 m-4 ls-n03 text-white transition">
-                            {{ category.title }}
-                        </h3>
-                    </a>
-                </div>
+                    <span class="mi mi-caret-right mi-12 bg-secondary ms-auto"></span>
+                </a>
             </div>
         {% endfor %}
     </div>

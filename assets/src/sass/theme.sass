@@ -287,24 +287,6 @@ header
             top: auto
             bottom: 25px
 
-#categories
-    .categories
-        .category
-            a
-                .img
-                    .gradient
-                        background-image: linear-gradient(to bottom, transparent 0%, rgba(var(--bs-black-rgb), .5) 100%)
-
-                h3
-                    @extend .text-decoration-none-w-hover
-
-                &:hover
-                    margin-top: -10px
-                    box-shadow: 0 .5rem 1.5rem rgba(var(--bs-black-rgb), .4) !important
-
-                    h3
-                        text-decoration-color: inherit !important
-
 #map-wrapper
     #map
         height: 600px
@@ -451,7 +433,7 @@ footer
                 bottom: -1px
                 left: 0
 
-#subcategories
+#subcategories, #categories
     .categories
         .category
             a
