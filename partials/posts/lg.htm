@@ -1,8 +1,10 @@
 <div class="post position-relative">
-    <p class="img mb-0 position-relative bg-gray rounded-3 overflow-hidden">
-        {% set image = post.featured_images.first %}
+    {% set image = post.thumb %}
 
-        <img src="{{ image.thumb(600, 400, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+    <p class="img mb-0 position-relative bg-gray rounded-3 overflow-hidden">
+        {% if image %}
+            <img src="{{ image.thumb(600, 400, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+        {% endif %}
 
         <span class="overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center transition">
             <img src="{{ 'assets/images/icons/arrow-circle-up-right.svg'|theme }}" alt="play">

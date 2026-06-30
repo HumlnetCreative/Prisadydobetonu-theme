@@ -1,18 +1,37 @@
 {% set post = __SELF__.post %}
-{% set first_image = post.featured_images.first %}
+{% set header_image = post.header_image %}
+{% set header_image_sm = post.header_image_sm ?: post.header_image %}
 
 <h1 class="mb-4 mb-xl-5 col-xl-10 offset-xl-1">
     {{ post.title }}
 </h1>
 
-{% if first_image %}
-    <p class="img mb4 mb-xl-5">
-        <img src="{{ first_image.thumb(1278, 640, {"mode": "crop"}) }}" alt="{{ first_image.description }}" class="img-fluid w-100 rounded-4">
+{% if header_image_sm %}
+    <p class="img mb-4 mb-xl-5">
+        <picture>
+            {% if header_image %}
+                <source media="(min-width:768px)" srcset="{{ header_image.thumb(1278, 640, {"mode": "crop"}) }}">
+            {% endif %}
+
+            <img src="{{ header_image_sm.thumb(768, 480, {"mode": "crop"}) }}" alt="{{ header_image_sm.description }}" class="img-fluid w-100 rounded-4">
+        </picture>
     </p>
 {% endif %}
 
 {% if post.content %}
     <div class="post-content">
         {{ post.content|raw }}
+    </div>
+{% endif %}
+
+{% if post.featured_images.count %}
+    <div class="gallery row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 g-xl-4 mt-5" id="gallery">
+        {% for image in post.featured_images %}
+            <div class="col">
+                <a href="{{ image.path }}" class="swiper-image d-block rounded-3 overflow-hidden" data-sub-html="{{ image.description }}">
+                    <img src="{{ image.thumb(400, 300, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+                </a>
+            </div>
+        {% endfor %}
     </div>
 {% endif %}
