@@ -46,7 +46,7 @@ function onInit() {
     <div class="container-lg pt-4 pb-xl-4">
         <div class="row g-xl-5">
             <div class="col-12 col-md">
-                <h1 class="mb-3 mb-xl-4">
+                <h1 class="mb-0">
                     {{ category.title }}
                 </h1>
 
@@ -62,15 +62,15 @@ function onInit() {
             {% endif %}
         </div>
 
-        <div class="border-1 border-top border-tertiary border-opacity-07 mt-32 pt-32" id="subcategories">
-            <h2 class="fs-20 ls-n02 mb-4">
-                Kategorie
-            </h2>
+{#        <div class="border-1 border-top border-tertiary border-opacity-07 mt-32 pt-32" id="subcategories">#}
+{#            <h2 class="fs-20 ls-n02 mb-4">#}
+{#                Kategorie#}
+{#            </h2>#}
 
-            {% component "subcategories" %}
-        </div>
+{#            {% component "subcategories" %}#}
+{#        </div>#}
 
-        <div class="mt-5 pt-xl-3">
+        <div class="mt-5">
             {% component "products" %}
         </div>
 

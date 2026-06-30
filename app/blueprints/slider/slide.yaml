@@ -1,0 +1,48 @@
+uuid: ee1a5972-859b-4b26-9828-c2d810f71186
+handle: Slider\Slide
+type: structure
+name: Slide
+drafts: false
+showImport: false
+showExport: false
+multisite: true
+
+structure:
+    maxDepth: 1
+
+primaryNavigation:
+    label: Slider
+    icon: icon-picture-o
+    order: 140
+
+navigation:
+    label: Slide
+    icon: icon-list-ul
+    parent: Slider\Slide
+    order: 10
+
+fields:
+    image_sm:
+        label: Malý obrázek
+        span: left
+        type: fileupload
+        maxFiles: 1
+        mode: image
+        fileTypes: png,jpg,jpeg,webp
+        commentAbove: Obrázek, který se bude zobrazovat na mobilních zařízeních a menších tabletech. Měl by mít rozměr 640x640px.
+        column: false
+        scope: false
+    image_lg:
+        label: Velký obrázek
+        span: right
+        type: fileupload
+        maxFiles: 1
+        mode: image
+        fileTypes: png,jpg,jpeg,webp
+        commentAbove: Obrázek, který se bude zobrazovat na větších zařízeních. Měl by mít rozměr 1920x550px.
+        column: false
+        scope: false
+    link:
+        label: Odkaz
+        span: left
+        type: text

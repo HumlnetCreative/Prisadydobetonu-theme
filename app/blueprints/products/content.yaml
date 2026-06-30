@@ -1,0 +1,21 @@
+uuid: 381a20de-1a9c-492d-a093-49b2d656f357
+handle: Products\Content
+type: single
+name: Obsah
+drafts: false
+multisite: true
+
+primaryNavigation:
+    label: Produkty
+    icon: icon-file-o
+    order: 130
+
+fields:
+    text:
+        label: Text
+        type: richeditor
+    image:
+        label: Obrázek
+        type: fileupload
+        maxFiles: 1
+        fileTypes: png,jpg,jpeg,webp
