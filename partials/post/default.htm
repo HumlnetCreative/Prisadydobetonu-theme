@@ -1,6 +1,5 @@
 {% set post = __SELF__.post %}
-{% set header_image = post.header_image %}
-{% set header_image_sm = post.header_image_sm ?: post.header_image %}
+{% set first_image = post.featured_images.first %}
 
 <h1 class="mb-4 mb-xl-5 col-xl-10 offset-xl-1">
     {{ post.title }}
@@ -20,7 +19,7 @@
 
 {% if post.content %}
     <div class="post-content">
-        {{ post.content|raw }}
+        {{ post.content|content|raw }}
     </div>
 {% endif %}
 
