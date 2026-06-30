@@ -1,5 +1,6 @@
 {% set post = __SELF__.post %}
-{% set first_image = post.featured_images.first %}
+{% set header_image = post.header_image %}
+{% set header_image_sm = post.header_image_sm ?: post.header_image %}
 
 <h1 class="mb-4 mb-xl-5 col-xl-10 offset-xl-1">
     {{ post.title }}
