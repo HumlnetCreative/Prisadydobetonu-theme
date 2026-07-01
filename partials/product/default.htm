@@ -50,11 +50,13 @@
                                 {% set consumption = preg_match(pattern, product.consumption) %}
 
                                 <span class="text-tertiary-55">
-                                    {{ consumption.1 }}:
+{#                                    {{ consumption.1 }}:#}
+                                    Spotřeba/vydatnost/dávkování:
                                 </span>
 
                                 <span class="fw-semibold mt-1">
-                                    {{ consumption.2 }}
+{#                                    {{ consumption.2 }}#}
+                                    {{ product.consumption }}
                                 </span>
                             </p>
                         {% endif %}
@@ -64,11 +66,13 @@
                                 {% set packages = preg_match(pattern, product.packages) %}
 
                                 <span class="text-tertiary-55">
-                                    {{ packages.1 }}:
+{#                                    {{ packages.1 }}:#}
+                                    Balení:
                                 </span>
 
                                 <span class="fw-semibold mt-1">
-                                    {{ packages.2 }}
+{#                                    {{ packages.2 }}#}
+                                    {{ product.packages }}
                                 </span>
                             </p>
                         {% endif %}
@@ -78,11 +82,13 @@
                                 {% set key_properties = preg_match(pattern, product.key_properties) %}
 
                                 <span class="text-tertiary-55">
-                                    {{ key_properties.1 }}:
+{#                                    {{ key_properties.1 }}:#}
+                                    Klíčové vlastnosti:
                                 </span>
 
                                 <span class="fw-semibold mt-1">
-                                    {{ key_properties.2 }}
+{#                                    {{ key_properties.2 }}#}
+                                    {{ product.key_properties }}
                                 </span>
                             </p>
                         {% endif %}
