@@ -1,10 +1,6 @@
-import Swiper from "swiper";
-import { Navigation, Autoplay, Scrollbar } from "swiper/modules";
 import lightGallery from "lightgallery";
 import lgThumbnail from "lightgallery/plugins/thumbnail"
 import lgZoom from "lightgallery/plugins/zoom"
-
-Swiper.use([Navigation, Autoplay, Scrollbar]);
 
 window.lightGallery = lightGallery;
 window.lgThumbnail = lgThumbnail;

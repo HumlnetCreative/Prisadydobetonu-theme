@@ -12,6 +12,6 @@
     "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
     "lightgallery": "^2.9.0",
-    "swiper": "^12.1.4"
+    "swiper": "^8.4.7"
   }
 }
