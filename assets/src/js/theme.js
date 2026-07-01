@@ -8,24 +8,31 @@ window.lgZoom = lgZoom;
 
 window.$ = window.jQuery = require("jquery");
 
-lightGallery(document.getElementById("gallery"), {
-    selector: ".swiper-image",
-    plugins: [lgZoom, lgThumbnail],
-    speed: 500,
-    galleryId: 1,
-});
+var gallery = document.getElementById("gallery");
 
-var sliderSwiper = new Swiper(".slider-swiper", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 5000,
-    },
-});
+if (gallery) {
+    lightGallery(gallery, {
+        selector: ".swiper-image",
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        galleryId: 1,
+    });
+}
 
-var videosSwiper = new Swiper(".videos-swiper", {
+if (document.querySelector(".slider-swiper")) {
+    var sliderSwiper = new Swiper(".slider-swiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+    });
+}
+
+if (document.querySelector(".videos-swiper")) {
+    var videosSwiper = new Swiper(".videos-swiper", {
     scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -52,9 +59,11 @@ var videosSwiper = new Swiper(".videos-swiper", {
             slidesOffsetAfter: $(".mi-logo").offset().left - 12,
         },
     },
-});
+    });
+}
 
-var productsSwiper = new Swiper(".products-swiper", {
+if (document.querySelector(".products-swiper")) {
+    var productsSwiper = new Swiper(".products-swiper", {
     scrollbar: {
         el: ".swiper-scrollbar",
         hide: false,
@@ -81,7 +90,8 @@ var productsSwiper = new Swiper(".products-swiper", {
             slidesOffsetAfter: $(".mi-logo").offset().left - 12,
         },
     },
-});
+    });
+}
 
 $(document).ready(function () {
     $("#dosage .volume-container").find(".form-control").keyup(function () {
