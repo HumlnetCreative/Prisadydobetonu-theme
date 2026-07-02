@@ -13,12 +13,12 @@ items:
 #            cssClass: eshop
 #            isExternal: '1'
     -
-        title: Produkty
+        title: Sortiment
         nesting: null
         type: cms-page
         url: null
-        code: produkty
-        reference: produkty
+        code: sortiment
+        reference: sortiment
         cmsPage: null
         replace: null
         viewBag:

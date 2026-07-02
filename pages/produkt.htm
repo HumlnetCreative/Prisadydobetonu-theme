@@ -9,16 +9,16 @@ handle = "Merchandise\Place"
 ==
 <?php
 function onInit() {
-    $this["activeMenuItem"] = "produkty";
+    $this["activeMenuItem"] = "sortiment";
 }
 ?>
 ==
 {% set product = product.product %}
 
 {% set items = {
-    "produkty": {
-        "title" : "Produkty",
-        "url"   : "produkty"|page,
+    "sortiment": {
+        "title" : "Sortiment",
+        "url"   : "sortiment"|page,
     },
 } %}
 

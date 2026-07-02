@@ -1,13 +1,4 @@
 items:
-#    -
-#        title: 'Přísady do betonu'
-#        type: url
-#        url: 'https://prisadydobetonu.stachema.cz/'
-#        code: ''
-#        viewBag:
-#            isHidden: '0'
-#            cssClass: ''
-#            isExternal: '1'
     -
         title: 'STACHEMA CZ'
         nesting: null
@@ -23,27 +14,39 @@ items:
             isExternal: '1'
     -
         title: 'STACHEMA Bratislava'
+        nesting: null
         type: url
         url: 'https://www.stachema.sk/'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '1'
     -
         title: 'STACHEMA Polska'
+        nesting: null
         type: url
         url: 'https://www.stachema.pl/'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '1'
     -
         title: 'STACHEMA Lvov-servis'
+        nesting: null
         type: url
         url: 'https://www.stachema.ua/'
         code: ''
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -54,7 +57,7 @@ items:
         url: 'https://www.lignofix.cz/'
         code: ''
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '1'
     -
@@ -63,7 +66,7 @@ items:
         url: 'https://www.mojelaguna.cz/'
         code: ''
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '1'
 name: 'Branches menu'

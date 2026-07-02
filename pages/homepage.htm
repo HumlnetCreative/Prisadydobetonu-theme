@@ -66,23 +66,23 @@ postPage = "aktualita"
     </div>
 </div>
 
-<div class="container-fluid py-5">
-    <div class="container-lg py-xl-4">
-        <h2 class="text-center mb-4 mb-xl-5">
-            Kontakty
-        </h2>
+{#<div class="container-fluid py-5">#}
+{#    <div class="container-lg py-xl-4">#}
+{#        <h2 class="text-center mb-4 mb-xl-5">#}
+{#            Kontakty#}
+{#        </h2>#}
 
-        <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-md-3 g-lg-5 row-cols-xl-4">
-            {% for category in contacts_categories.where("homepage", true).get() %}
-                <div class="col">
-                    <div class="p-4 rounded-3 {{ loop.first ? "bg-gray" }}">
-                        {% partial "contact" contact=category %}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
+{#        <div class="row row-cols-1 g-4 row-cols-sm-2 row-cols-md-3 g-lg-5 row-cols-xl-4">#}
+{#            {% for category in contacts_categories.where("homepage", true).get() %}#}
+{#                <div class="col">#}
+{#                    <div class="p-4 rounded-3 {{ loop.first ? "bg-gray" }}">#}
+{#                        {% partial "contact" contact=category %}#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 {#
 <div>
     <h2 class="text-center mb-4 mb-xl-5">
@@ -93,46 +93,46 @@ postPage = "aktualita"
 </div>
 #}
 
-<div class="container-fluid py-5">
-    <div class="container-lg pt-xl-4">
-        <h2 class="mb-4 mb-xl-5">
-            Videa
-        </h2>
-    </div>
+{#<div class="container-fluid py-5">#}
+{#    <div class="container-lg pt-xl-4">#}
+{#        <h2 class="mb-4 mb-xl-5">#}
+{#            Videa#}
+{#        </h2>#}
+{#    </div>#}
 
-    <div class="swiper videos-swiper pb-xl-4">
-        <div class="swiper-wrapper">
-            {% for video in videos.take(8).get() %}
-                <div class="swiper-slide">
-                    {% partial "video" video=video %}
-                </div>
-            {% endfor %}
-        </div>
+{#    <div class="swiper videos-swiper pb-xl-4">#}
+{#        <div class="swiper-wrapper">#}
+{#            {% for video in videos.take(8).get() %}#}
+{#                <div class="swiper-slide">#}
+{#                    {% partial "video" video=video %}#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
 
-        <div class="container-lg">
-            <div class="swiper-scrollbar position-relative start-0 end-0 w-100 bottom-0 mt-4 mt-xl-5"></div>
+{#        <div class="container-lg">#}
+{#            <div class="swiper-scrollbar position-relative start-0 end-0 w-100 bottom-0 mt-4 mt-xl-5"></div>#}
 
-            <div class="mt-4 mt-xl-5 text-center">
-                <a href="{{ 'videa'|page }}" class="btn btn-outline-secondary d-inline-flex align-items-center">
-                    Další videa <span class="mi-arrow-right mi-16 bg-secondary ms-2 transition"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+{#            <div class="mt-4 mt-xl-5 text-center">#}
+{#                <a href="{{ 'videa'|page }}" class="btn btn-outline-secondary d-inline-flex align-items-center">#}
+{#                    Další videa <span class="mi-arrow-right mi-16 bg-secondary ms-2 transition"></span>#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 
-<div class="container-fluid py-5 bg-gray-light">
-    <div class="container-lg py-xl-4">
-        <h2 class="mb-4 mb-xl-5">
-            Aktuality
-        </h2>
+{#<div class="container-fluid py-5 bg-gray-light">#}
+{#    <div class="container-lg py-xl-4">#}
+{#        <h2 class="mb-4 mb-xl-5">#}
+{#            Aktuality#}
+{#        </h2>#}
 
-        {% component "postshp" %}
+{#        {% component "postshp" %}#}
 
-        <div class="mt-4 mt-xl-5 text-center">
-            <a href="{{ 'aktuality'|page }}" class="btn btn-outline-secondary d-inline-flex align-items-center">
-                Další aktuality <span class="mi-arrow-right mi-16 bg-secondary ms-2 transition"></span>
-            </a>
-        </div>
-    </div>
-</div>
+{#        <div class="mt-4 mt-xl-5 text-center">#}
+{#            <a href="{{ 'aktuality'|page }}" class="btn btn-outline-secondary d-inline-flex align-items-center">#}
+{#                Další aktuality <span class="mi-arrow-right mi-16 bg-secondary ms-2 transition"></span>#}
+{#            </a>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

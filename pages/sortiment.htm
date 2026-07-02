@@ -1,6 +1,6 @@
-url = "/produkty/:page?"
+url = "/sortiment/:page?"
 layout = "default"
-title = "Produkty"
+title = "Sortiment"
 
 [categories subcategories]
 page = "kategorie"
@@ -13,13 +13,13 @@ handle = "Products\Content"
 ==
 <?php
 function onInit() {
-    $this["activeMenuItem"] = "produkty";
+    $this["activeMenuItem"] = "sortiment";
 }
 ?>
 ==
 {% set items = {
-    "produkty": {
-        "title": "Produkty",
+    "sortiment": {
+        "title": "Sortiment",
         "active": true,
     }
 } %}

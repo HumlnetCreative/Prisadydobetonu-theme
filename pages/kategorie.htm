@@ -1,4 +1,4 @@
-url = "/produkty/kategorie/:slug/:page?"
+url = "/sortiment/kategorie/:slug/:page?"
 layout = "default"
 title = "Kategorie"
 
@@ -13,14 +13,14 @@ categoryPage = "kategorie"
 ==
 <?php
 function onInit() {
-    $this["activeMenuItem"] = "produkty";
+    $this["activeMenuItem"] = "sortiment";
 }
 ?>
 ==
 {% set items = {
-    "produkty": {
-        "title" : "Produkty",
-        "url"   : "produkty"|page,
+    "sortiment": {
+        "title" : "Sortiment",
+        "url"   : "sortiment"|page,
     },
 } %}
 
